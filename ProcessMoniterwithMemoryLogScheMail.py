@@ -30,7 +30,6 @@ def MailSender(filename,time):
 
         body = """
         HELLO %s , 
-        Welcome to Marvellous Infosysytems.
         Please find the attached document which contains Log of Running process.
         Log file is created at : %s
         
@@ -38,11 +37,10 @@ def MailSender(filename,time):
         
         Thanks Regards,
          Manav Jadhav
-         Member Of Marvellous Family
           """%(toaddr,time)
 
         Subject = """
-        Marveloous Infosystems Process log generated at : %s
+        Process log generated at : %s
         """%(time)
 
         msg['Subject'] = Subject
@@ -93,7 +91,7 @@ def ProcessLog(log_dir="Marvellous"):
     log_path = os.path.join(log_dir,"MarvellousLog%s.log"%time.time())
     f = open(log_path,'w')
     f.write(seperator +"\n")
-    print("Marvellous infosystem Process Log : "+time.ctime()+"\n")
+    print(" Process Log : "+time.ctime()+"\n")
     f.write(seperator + "\n")
 
     for proc in psutil.process_iter():
@@ -123,7 +121,7 @@ def ProcessLog(log_dir="Marvellous"):
         print("There is no internet connection")
 
 def main():
-    print("-----Marvellous Infosystems : Python Automation & Machine Learning -----")
+    print("-----Python Automation & Machine Learning -----")
 
     print("Application Name : "+argv[0])
 
